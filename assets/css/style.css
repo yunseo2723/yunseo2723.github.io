@@ -312,7 +312,6 @@ img{ max-width: 100%; display: block; }
 
 .skill-icons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
     gap: 10px;
     margin-top: 14px;
 }
