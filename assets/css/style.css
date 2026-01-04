@@ -320,8 +320,6 @@ img{ max-width: 100%; display: block; }
 .skill-icons img {
     width: 100%;              /* 🔥 가로폭 꽉 채우기 */
     height: auto;             /* 비율 자동 */
-    max-height: 36px;         /* 아이콘 전체 높이 제한 */
-    object-fit: contain;
 }
 
 .row{
