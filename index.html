@@ -1,11 +1,428 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Yunseo Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="원페이지 포트폴리오 (이력서형)" />
+    <meta name="theme-color" content="#0b1220" />
+
+    <!-- Open Graph (공유용, 선택) -->
+    <meta property="og:title" content="홍길동 | Portfolio" />
+    <meta property="og:description" content="원페이지 포트폴리오 (이력서형)" />
+    <meta property="og:image" content="assets/img/og.png" />
+
+    <title>홍길동 | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 폰트는 취향껏 변경 가능 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-<h1>Hello, GitHub Pages</h1>
-<p>인텔리제이에서 개발 중입니다.</p>
+<!-- 상단 고정 네비 -->
+<header class="header" id="top">
+    <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+            <span class="brand__dot"></span>
+            <span class="brand__text">Portfolio</span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+            <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                <span class="sr-only">메뉴 열기</span>
+                <span class="nav__bar"></span>
+                <span class="nav__bar"></span>
+                <span class="nav__bar"></span>
+            </button>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a class="nav__link" href="#about">About</a></li>
+                <li><a class="nav__link" href="#education">Education</a></li>
+                <li><a class="nav__link" href="#experience">Experience</a></li>
+                <li><a class="nav__link" href="#certificates">Certificates</a></li>
+                <li><a class="nav__link" href="#skills">Skills</a></li>
+                <li><a class="nav__link" href="#projects">Projects</a></li>
+                <li><a class="nav__link" href="#interests">Interests</a></li>
+                <li><a class="nav__link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- 히어로 -->
+<main>
+    <section class="hero">
+        <div class="container hero__inner">
+            <div class="hero__left">
+                <p class="badge">ONE-PAGE RESUME</p>
+                <h1 class="hero__title">
+                    안녕하세요, <span class="accent">홍길동</span>입니다.
+                </h1>
+                <p class="hero__subtitle">
+                    백엔드/프론트엔드 개발을 기반으로 문제를 구조화하고,
+                    제품을 끝까지 완성하는 것을 좋아합니다.
+                </p>
+
+                <div class="hero__cta">
+                    <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
+                    <a class="btn btn--ghost" href="#contact">연락하기</a>
+                </div>
+
+                <div class="hero__meta">
+                    <div class="meta__item">
+                        <span class="meta__label">Email</span>
+                        <a class="meta__value" href="mailto:you@example.com">you@example.com</a>
+                    </div>
+                    <div class="meta__item">
+                        <span class="meta__label">GitHub</span>
+                        <a class="meta__value" href="https://github.com/yourid" target="_blank" rel="noreferrer">github.com/yourid</a>
+                    </div>
+                    <div class="meta__item">
+                        <span class="meta__label">Location</span>
+                        <span class="meta__value">Seoul, KR</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="hero__right">
+                <div class="profile-card">
+                    <div class="profile-card__top">
+                        <img class="profile-card__img" src="assets/img/profile.jpg" alt="프로필 이미지" onerror="this.style.display='none'">
+                        <div class="profile-card__title">
+                            <h2>홍길동</h2>
+                            <p>Full-stack Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card__body">
+                        <ul class="kv">
+                            <li><span>Phone</span><span>010-0000-0000</span></li>
+                            <li><span>Blog</span><a href="https://yourblog.com" target="_blank" rel="noreferrer">yourblog.com</a></li>
+                            <li><span>LinkedIn</span><a href="https://linkedin.com/in/yourid" target="_blank" rel="noreferrer">linkedin.com/in/yourid</a></li>
+                        </ul>
+                        <div class="chips">
+                            <span class="chip">Java</span>
+                            <span class="chip">Spring</span>
+                            <span class="chip">React</span>
+                            <span class="chip">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section__head">
+                <h2>About</h2>
+                <p>저를 한 줄로 소개하면 “끝까지 만드는 개발자”입니다.</p>
+            </div>
+
+            <div class="grid grid--2">
+                <div class="card">
+                    <h3>핵심 강점</h3>
+                    <ul class="bullets">
+                        <li>요구사항을 기능 단위로 쪼개고 일정/리스크를 관리합니다.</li>
+                        <li>API/DB/화면까지 연결되는 전체 흐름에서 병목을 찾아 개선합니다.</li>
+                        <li>문서화(README, API 명세)와 재현 가능한 개발환경을 선호합니다.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>관심 분야</h3>
+                    <ul class="bullets">
+                        <li>추천/검색/랭킹, 사용자 행동 데이터 기반 개선</li>
+                        <li>실시간/비동기 처리, 안정적인 배포 파이프라인</li>
+                        <li>사용자 경험(UX) 개선을 위한 빠른 실험</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section__head">
+                <h2>Education</h2>
+                <p>학력 및 교육 이력</p>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content card">
+                        <div class="row row--between">
+                            <h3>OO대학교 컴퓨터공학과</h3>
+                            <span class="muted">2019.03 ~ 2023.02</span>
+                        </div>
+                        <p class="muted">학사 / 주요 과목: 자료구조, OS, DB, 네트워크</p>
+                    </div>
+                </article>
+
+                <article class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content card">
+                        <div class="row row--between">
+                            <h3>부트캠프 / 교육과정(선택)</h3>
+                            <span class="muted">2023.03 ~ 2023.08</span>
+                        </div>
+                        <p class="muted">Spring Boot / React / 팀프로젝트 중심</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section__head">
+                <h2>Experience</h2>
+                <p>실무/인턴/프리랜서 경험</p>
+            </div>
+
+            <div class="stack">
+                <article class="card">
+                    <div class="row row--between">
+                        <h3>OO회사 · Backend Engineer</h3>
+                        <span class="muted">2024.01 ~ 2025.12</span>
+                    </div>
+                    <p class="muted">Spring Boot, JPA, MySQL, Redis, AWS</p>
+                    <ul class="bullets">
+                        <li>챗봇 빌더/관리도구 API 개발 및 운영</li>
+                        <li>배치/스케줄러 안정화로 실패율 X% → Y% 개선</li>
+                        <li>쿼리 튜닝 및 캐시 도입으로 응답시간 평균 Zms 단축</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="row row--between">
+                        <h3>프로젝트/외주(선택)</h3>
+                        <span class="muted">2023.09 ~ 2023.12</span>
+                    </div>
+                    <ul class="bullets">
+                        <li>관리자 페이지 UI 제작, 권한별 메뉴/라우팅 구성</li>
+                        <li>로그/모니터링(선택) 체계 구성</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section class="section" id="certificates">
+        <div class="container">
+            <div class="section__head">
+                <h2>Certificates</h2>
+                <p>자격증 / 수상</p>
+            </div>
+
+            <div class="grid grid--3">
+                <div class="card">
+                    <h3>정보처리기사</h3>
+                    <p class="muted">한국산업인력공단 · 2024</p>
+                </div>
+                <div class="card">
+                    <h3>SQLD</h3>
+                    <p class="muted">한국데이터산업진흥원 · 2023</p>
+                </div>
+                <div class="card">
+                    <h3>기타 자격(선택)</h3>
+                    <p class="muted">네트워크/클라우드 등</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section__head">
+                <h2>Skills</h2>
+                <p>자주 쓰는 기술과 경험 범위</p>
+            </div>
+
+            <div class="grid grid--2">
+                <div class="card">
+                    <h3>Backend</h3>
+                    <div class="pillset">
+                        <span class="pill">Java</span>
+                        <span class="pill">Spring Boot</span>
+                        <span class="pill">JPA/Hibernate</span>
+                        <span class="pill">REST API</span>
+                        <span class="pill">Redis</span>
+                        <span class="pill">JUnit</span>
+                    </div>
+                    <p class="muted">API 설계/테스트, 성능 개선, 운영 이슈 대응</p>
+                </div>
+
+                <div class="card">
+                    <h3>Frontend</h3>
+                    <div class="pillset">
+                        <span class="pill">React</span>
+                        <span class="pill">TypeScript</span>
+                        <span class="pill">HTML/CSS</span>
+                        <span class="pill">Vite</span>
+                    </div>
+                    <p class="muted">컴포넌트 설계, 상태관리, 반응형 UI</p>
+                </div>
+
+                <div class="card">
+                    <h3>DB / Infra</h3>
+                    <div class="pillset">
+                        <span class="pill">MySQL</span>
+                        <span class="pill">PostgreSQL</span>
+                        <span class="pill">AWS(선택)</span>
+                        <span class="pill">Docker(선택)</span>
+                    </div>
+                    <p class="muted">ERD 설계, 인덱싱/쿼리 튜닝, 배포 자동화(선택)</p>
+                </div>
+
+                <div class="card">
+                    <h3>Tools</h3>
+                    <div class="pillset">
+                        <span class="pill">Git/GitHub</span>
+                        <span class="pill">Notion</span>
+                        <span class="pill">Jira</span>
+                        <span class="pill">Figma</span>
+                    </div>
+                    <p class="muted">협업/문서화/이슈관리</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section__head">
+                <h2>Projects</h2>
+                <p>대표 프로젝트 2~4개 정도만 “깊게” 쓰는 게 보통 가장 강력해요.</p>
+            </div>
+
+            <div class="grid grid--2">
+                <article class="card project">
+                    <div class="project__top">
+                        <h3>CookCrew (예시)</h3>
+                        <span class="tag">Team</span>
+                    </div>
+                    <p class="muted">레시피 공유 + 식단 관리 + 랭킹</p>
+                    <ul class="bullets">
+                        <li>역할: 백엔드 리드 / API 설계</li>
+                        <li>포인트: 검색/필터/정렬, 추천 로직(선택)</li>
+                        <li>성과: 응답시간 개선, 장애 대응 경험</li>
+                    </ul>
+                    <div class="project__links">
+                        <a class="btn btn--small" href="https://github.com/yourid/cookcrew" target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="btn btn--small btn--ghost" href="https://your-demo.com" target="_blank" rel="noreferrer">Demo</a>
+                    </div>
+                </article>
+
+                <article class="card project">
+                    <div class="project__top">
+                        <h3>FlowerPot (예시)</h3>
+                        <span class="tag tag--solo">Solo</span>
+                    </div>
+                    <p class="muted">화장품 정보/관리 서비스</p>
+                    <ul class="bullets">
+                        <li>역할: 풀스택 / 관리자 ERP</li>
+                        <li>포인트: 권한 기반 메뉴, CRUD, 파일 업로드</li>
+                        <li>성과: 운영 편의성 개선</li>
+                    </ul>
+                    <div class="project__links">
+                        <a class="btn btn--small" href="https://github.com/yourid/flowerpot" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests -->
+    <section class="section" id="interests">
+        <div class="container">
+            <div class="section__head">
+                <h2>Interests</h2>
+                <p>가벼운 취미/관심사 (인간미)</p>
+            </div>
+
+            <div class="grid grid--3">
+                <div class="card">
+                    <h3>Music</h3>
+                    <p class="muted">Jazz / R&B</p>
+                </div>
+                <div class="card">
+                    <h3>Sports</h3>
+                    <p class="muted">Cycling / Fitness</p>
+                </div>
+                <div class="card">
+                    <h3>Build</h3>
+                    <p class="muted">사이드 프로젝트 / 자동화</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section__head">
+                <h2>Contact</h2>
+                <p>정적 사이트는 “메일 전송”을 외부 서비스로 붙이는 방식이 일반적이에요.</p>
+            </div>
+
+            <div class="grid grid--2">
+                <div class="card">
+                    <h3>연락처</h3>
+                    <ul class="bullets">
+                        <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+                        <li>GitHub: <a href="https://github.com/yourid" target="_blank" rel="noreferrer">github.com/yourid</a></li>
+                        <li>LinkedIn: <a href="https://linkedin.com/in/yourid" target="_blank" rel="noreferrer">linkedin.com/in/yourid</a></li>
+                    </ul>
+                    <p class="muted">* 아래 폼을 쓰려면 Formspree 같은 서비스 설정이 필요</p>
+                </div>
+
+                <form class="card form" id="contactForm"
+                      action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+                      method="POST">
+                    <h3>메시지 보내기</h3>
+
+                    <label class="field">
+                        <span>이름</span>
+                        <input name="name" type="text" placeholder="홍길동" required />
+                    </label>
+
+                    <label class="field">
+                        <span>이메일</span>
+                        <input name="email" type="email" placeholder="you@example.com" required />
+                    </label>
+
+                    <label class="field">
+                        <span>내용</span>
+                        <textarea name="message" rows="5" placeholder="무엇을 도와드릴까요?" required></textarea>
+                    </label>
+
+                    <button class="btn btn--primary" type="submit">전송</button>
+                    <p class="muted" id="formStatus" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 푸터 -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> 홍길동. All rights reserved.</p>
+        <a class="to-top" href="#top">↑ TOP</a>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
