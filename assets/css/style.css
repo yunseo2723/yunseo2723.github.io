@@ -312,12 +312,16 @@ img{ max-width: 100%; display: block; }
 
 .skill-icons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr); /* 가로 4칸 */
+    gap: 12px;
+    width: 100%;
     margin-top: 14px;
 }
 .skill-icons img {
-    height: 34px;
+    width: 100%;        /* 각 칸 가로에 맞춤 */
+    height: auto;
+    max-height: 36px;   /* ← 이 값이 핵심 (32~40 추천) */
+    object-fit: contain;
 }
 
 .row{
