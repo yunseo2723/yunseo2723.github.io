@@ -312,7 +312,6 @@ img{ max-width: 100%; display: block; }
 
 .skill-icons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin-top: 12px;
 }
@@ -320,7 +319,6 @@ img{ max-width: 100%; display: block; }
 .skill-icons img {
     width: 100%;
     height: auto;
-    max-height: 32px;
     object-fit: contain;
 }
 
