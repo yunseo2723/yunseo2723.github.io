@@ -310,8 +310,16 @@ img{ max-width: 100%; display: block; }
 }
 .timeline__content{ position: relative; }
 
+.skill-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
+    gap: 10px;
+    margin-top: 14px;
+}
 .skill-icons img {
-    height: 34px;
+    width: 100%;
+    height: auto;
+    max-height: 40px;
 }
 
 .row{
