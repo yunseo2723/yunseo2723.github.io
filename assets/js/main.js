@@ -61,12 +61,12 @@
 
                 if (res.ok) {
                     form.reset();
-                    status.textContent = "✅ 전송 완료! 곧 답장드릴게요.";
+                    status.textContent = "전송 완료! 감사합니다.";
                 } else {
-                    status.textContent = "❌ 전송 실패. 잠시 후 다시 시도해 주세요.";
+                    status.textContent = "전송 실패. 잠시 후 다시 시도해 주세요.";
                 }
             } catch (err) {
-                status.textContent = "❌ 네트워크 오류. 인터넷 연결을 확인해 주세요.";
+                status.textContent = "네트워크 오류. 인터넷 연결을 확인해 주세요.";
             }
         });
     }

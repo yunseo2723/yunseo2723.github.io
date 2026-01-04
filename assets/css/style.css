@@ -310,6 +310,10 @@ img{ max-width: 100%; display: block; }
 }
 .timeline__content{ position: relative; }
 
+.skill-icons img {
+    height: 34px;
+}
+
 .row{
     display:flex;
     gap: 10px;
