@@ -311,14 +311,16 @@ img{ max-width: 100%; display: block; }
 .timeline__content{ position: relative; }
 
 .skill-icons {
-    display: grid;
-    gap: 12px;
+    display: flex;
+    flex-direction: column;   /* 무조건 세로 = 두 줄 */
+    gap: 10px;
     margin-top: 12px;
 }
 
 .skill-icons img {
-    width: 100%;
-    height: auto;
+    width: 100%;              /* 🔥 가로폭 꽉 채우기 */
+    height: auto;             /* 비율 자동 */
+    max-height: 36px;         /* 아이콘 전체 높이 제한 */
     object-fit: contain;
 }
 
