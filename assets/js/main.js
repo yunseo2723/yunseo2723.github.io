@@ -70,4 +70,16 @@
             }
         });
     }
+
+    const toggleBtn = document.getElementById("toggleCertBtn");
+    const extraCerts = document.getElementById("extraCerts");
+
+    if (toggleBtn && extraCerts) {
+        toggleBtn.addEventListener("click", () => {
+            const isOpen = extraCerts.classList.toggle("is-open");
+            toggleBtn.textContent = isOpen
+                ? "기타 자격증 닫기"
+                : "기타 자격증 더 보기";
+        });
+    }
 })();

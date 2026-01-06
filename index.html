@@ -62,8 +62,8 @@
                     안녕하세요, <span class="accent">하윤서</span>입니다.
                 </h1>
                 <p class="hero__subtitle">
-                    백엔드/프론트엔드 개발을 기반으로 문제를 구조화하고,
-                    제품을 끝까지 완성하는 것을 좋아합니다.
+                    데이터와 도메인을 구조화해 문제를 정의하고,
+                    DB 설계와 로직 구현을 통해 실제 서비스로 완성하는 개발자입니다.
                 </p>
 
                 <div class="hero__cta">
@@ -117,25 +117,25 @@
         <div class="container">
             <div class="section__head">
                 <h2>About</h2>
-                <p>저를 한 줄로 소개하면 “끝까지 만드는 개발자”입니다.</p>
+                <p>저를 한 줄로 소개하면 “문제를 구조적으로 정리하고, 기능으로 검증되는 서비스를 끝까지 완성하는 개발자”입니다.</p>
             </div>
 
             <div class="grid grid--2">
                 <div class="card">
                     <h3>핵심 강점</h3>
                     <ul class="bullets">
-                        <li>요구사항을 기능 단위로 쪼개고 일정/리스크를 관리합니다.</li>
-                        <li>API/DB/화면까지 연결되는 전체 흐름에서 병목을 찾아 개선합니다.</li>
-                        <li>문서화(README, API 명세)와 재현 가능한 개발환경을 선호합니다.</li>
+                        <li>데이터와 요구사항을 정리해 기능 단위로 구현하는 과정을 중요하게 생각합니다.</li>
+                        <li>DB 구조와 API 설계를 통해 서비스의 기반을 안정적으로 만드는 경험을 쌓아왔습니다.</li>
+                        <li>실제 사용자 관점에서 불편한 지점을 찾고 개선하는 작업을 반복해왔습니다.</li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <h3>관심 분야</h3>
                     <ul class="bullets">
-                        <li>추천/검색/랭킹, 사용자 행동 데이터 기반 개선</li>
-                        <li>실시간/비동기 처리, 안정적인 배포 파이프라인</li>
-                        <li>사용자 경험(UX) 개선을 위한 빠른 실험</li>
+                        <li>추천·검색·조합 등 데이터 기반 기능 설계와 개선</li>
+                        <li>사용자 행동 데이터를 바탕으로 한 서비스 개선</li>
+                        <li>저장–처리–적재 흐름을 오케스트레이션으로 관리하는 데이터 파이프라인 구현</li>
                     </ul>
                 </div>
             </div>
@@ -160,6 +160,28 @@
                         </div>
                         <p class="muted">소프트웨어학과 학사</p>
                         <p class="muted">졸업 예정</p>
+                    </div>
+                </article>
+                <article class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content card">
+                        <div class="row row--between">
+                            <h3>대학·기업 협력형 SW 아카데미</h3>
+                            <span class="muted">2025.02 ~ 2025.06</span>
+                        </div>
+                        <p class="muted">기업 연계 실무 중심 소프트웨어 교육 과정</p>
+                        <p class="muted">팀 프로젝트 기반 개발, 백엔드·데이터 중심 문제 해결 경험</p>
+                    </div>
+                </article>
+                <article class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content card">
+                        <div class="row row--between">
+                            <h3>부천북고등학교</h3>
+                            <span class="muted">2017.03 ~ 2020.02</span>
+                        </div>
+                        <p class="muted">인문계열 이과</p>
+                        <p class="muted">졸업</p>
                     </div>
                 </article>
             </div>
@@ -207,9 +229,10 @@
         <div class="container">
             <div class="section__head">
                 <h2>Certificates</h2>
-                <p>자격증 / 수상</p>
+                <p>자격증</p>
             </div>
 
+            <!-- ✅ 주요 자격증 -->
             <div class="grid grid--3">
                 <div class="card">
                     <h3>정보처리기사</h3>
@@ -227,13 +250,20 @@
                     <h3>네트워크관리사 2급</h3>
                     <p class="muted">한국정보통신자격협회 · 2024</p>
                 </div>
+            </div>
+
+            <!-- 🔽 더 보기 버튼 -->
+            <div class="cert-toggle">
+                <button class="btn btn--ghost" id="toggleCertBtn">
+                    기타 자격증 더 보기
+                </button>
+            </div>
+
+            <!-- ⛔ 기타 자격증 (기본 숨김) -->
+            <div class="grid grid--3 cert-extra" id="extraCerts">
                 <div class="card">
                     <h3>컴퓨터활용능력 1급</h3>
                     <p class="muted">대한상공회의소 · 2023</p>
-                </div>
-                <div class="card">
-                    <h3>워드프로세서</h3>
-                    <p class="muted">대한상공회의소 · 2021</p>
                 </div>
                 <div class="card">
                     <h3>한국사능력검정시험 1급</h3>
@@ -244,9 +274,26 @@
                     <p class="muted">Microsoft · 2020</p>
                 </div>
                 <div class="card">
+                    <h3>워드프로세서</h3>
+                    <p class="muted">대한상공회의소 · 2021</p>
+                </div>
+                <div class="card">
                     <h3>운전면허 1종 보통</h3>
                     <p class="muted">경찰청 · 2020</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="awards">
+        <div class="container">
+            <div class="section__head">
+                <h2>Awards</h2>
+                <p>수상</p>
+            </div>
+
+            <div class="grid grid--3">
                 <div class="card">
                     <h3>헥토</h3>
                     <p class="muted">동상 · 2025</p>

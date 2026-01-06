@@ -310,6 +310,20 @@ img{ max-width: 100%; display: block; }
 }
 .timeline__content{ position: relative; }
 
+.cert-toggle {
+    margin: 16px 0;
+    text-align: center;
+}
+
+.cert-extra {
+    display: none;
+    margin-top: 16px;
+}
+
+.cert-extra.is-open {
+    display: grid;
+}
+
 .skill-icons {
     display: flex;
     flex-direction: column;   /* 무조건 세로 = 두 줄 */
