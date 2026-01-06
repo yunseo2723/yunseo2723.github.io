@@ -322,6 +322,7 @@ img{ max-width: 100%; display: block; }
 
 .cert-extra.is-open {
     display: grid;
+    gap: 14px;
 }
 
 .skill-icons {
