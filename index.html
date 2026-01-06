@@ -418,19 +418,50 @@
         <div class="container">
             <div class="section__head">
                 <h2>Projects</h2>
-                <p>대표 프로젝트 2~4개 정도만 “깊게” 쓰는 게 보통 가장 강력해요.</p>
             </div>
 
-            <div class="grid grid--2">
                 <article class="card project">
                     <div class="project__top">
-                        <h3>CareMate - 사용자 맞춤 요양원 추천</h3>
+                        <h3>CareMate – 사용자 맞춤 요양원 추천 서비스</h3>
                             <span class="tag">Solo</span>
                     </div>
-                    <p class="muted">요양원 맟춤 추천 + 월 예상 비용 계산</p>
+                    <h2>프로젝트 개요</h2>
+                    <p class="muted">CareMate는 요양원 선택 과정에서 발생하는
+                        정보 분산, 비교의 어려움, 비용 계산의 복잡성을 해결하기 위해 기획한
+                        사용자 맞춤 요양원 추천 서비스입니다.
+
+                        약 3만 개의 요양원 데이터와 사용자 리뷰 데이터를 기반으로,
+                        조건 필터링·리뷰 분석·지도 기반 탐색을 통해
+                        사용자가 현실적인 기준으로 요양원을 선택할 수 있도록 설계했습니다.</p>
+                    <h2>핵심 기능 및 서비스 흐름</h2>
                     <ul class="bullets">
-                        <li>포인트: 검색/필터/정렬, 추천 로직(선택)</li>
-                        <li>성과: 응답시간 개선, 장애 대응 경험</li>
+                        <li>지역, 요양 등급, 예산, 옵션 조건을 기반으로 한 요양원 검색 / 필터 / 정렬</li>
+                        <li>카카오맵 API를 활용한 지도 기반 요양원 선택 UX</li>
+                        <li>요양원별 서비스 항목을 반영한 월 예상 비용 계산기 제공</li>
+                        <li>OpenAI API를 연동한 질문형 AI 요양원 추천 기능</li>
+                    </ul>
+                    <h2>데이터 파이프라인 & 추천 시스템</h2>
+                    <ul class="bullets">
+                        <li>PostgreSQL 기반으로 요양원(약 3만 건), 리뷰, 게시물, 댓글 데이터 모델링</li>
+                        <li>Python 스크립트를 활용해 테스트용 사용자·리뷰 데이터 생성</li>
+                        <li>Airflow + FastAPI로 구성된 분석 서버에서 리뷰 데이터를 1시간 단위로 정기 분석</li>
+                        <li>리뷰 분석 결과를 점수화하여 사용자 조건과 결합한 리뷰 기반 요양원 추천 로직 구현</li>
+                        <li>분석 서버를 백엔드와 분리 배포하여 확장성과 유지보수성 고려</li>
+                    </ul>
+                    <h2>기술 스택 및 아키텍처</h2>
+                    <ul class="bullets">
+                        <li>Backend: FastAPI, PostgreSQL</li>
+                        <li>Data / Pipeline: Python, Airflow</li>
+                        <li>AI: OpenAI API</li>
+                        <li>Frontend: React</li>
+                        <li>Infra / Deploy : Render, Vercel</li>
+                    </ul>
+                    <h2>성과 및 배운 점</h2>
+                    <ul class="bullets">
+                        <li>데이터 수집 → 저장 → 분석 → 추천 → 서비스 제공까지 데이터 기반 서비스의 전체 흐름을 직접 설계·구현</li>
+                        <li>분석 서버 분리 배포를 통해 서비스 서버와 데이터 파이프라인의 역할 분리 경험</li>
+                        <li>단순 CRUD를 넘어 사용자 의사결정에 직접 영향을 주는 기능을 설계한 경험</li>
+                        <li>실제 배포 환경에서 동작하는 서비스를 끝까지 완성하며 운영 관점에서의 구조 설계 중요성을 체감</li>
                     </ul>
                     <div class="project__links">
                         <a class="btn btn--small" href="https://github.com/yunseo2723/CareMate" target="_blank" rel="noreferrer">GitHub</a>
@@ -470,7 +501,6 @@
                     </div>
                 </article>
             </div>
-        </div>
     </section>
 
     <!-- Interests -->
