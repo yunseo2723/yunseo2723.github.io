@@ -310,11 +310,6 @@ img{ max-width: 100%; display: block; }
 }
 .timeline__content{ position: relative; }
 
-.project-images {
-    display: grid;
-    gap: 16px;
-    margin: 20px 0;
-}
 .project-images.grid--2 {
     grid-template-columns: repeat(2, 1fr);
 }
@@ -322,12 +317,21 @@ img{ max-width: 100%; display: block; }
 .project-images.grid--3 {
     grid-template-columns: repeat(3, 1fr);
 }
+.project-images {
+    display: grid;
+    gap: 16px;
+    margin: 20px 0;
+}
+
 .project-images img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: contain;
     background: #0f1320;
     border-radius: 12px;
+
+    /* 흰 배경 UI 보호 */
     padding: 6px;
 }
 
