@@ -313,9 +313,11 @@ img{ max-width: 100%; display: block; }
 .project-images.grid--2 {
     grid-template-columns: repeat(2, 1fr);
 }
-
 .project-images.grid--3 {
     grid-template-columns: repeat(3, 1fr);
+}
+.project-images.grid--4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 .project-images {
     display: grid;
