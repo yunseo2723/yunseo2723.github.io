@@ -281,6 +281,13 @@
                 </div>
                 <div class="card">
                     <div class="row row--between">
+                        <h3>워드프로세서</h3>
+                        <span class="muted">2021</span>
+                    </div>
+                    <p class="muted">대한상공회의소</p>
+                </div>
+                <div class="card">
+                    <div class="row row--between">
                         <h3>한국사능력검정시험 1급</h3>
                         <span class="muted">2021</span>
                     </div>
@@ -292,13 +299,6 @@
                         <span class="muted">2020</span>
                     </div>
                     <p class="muted">Microsoft</p>
-                </div>
-                <div class="card">
-                    <div class="row row--between">
-                        <h3>워드프로세서</h3>
-                        <span class="muted">2021</span>
-                    </div>
-                    <p class="muted">대한상공회의소</p>
                 </div>
                 <div class="card">
                     <div class="row row--between">
@@ -318,12 +318,12 @@
                 <h2>Awards</h2>
                 <p>수상</p>
             </div>
-
-            <div class="grid grid--3">
-                <div class="card">
-                    <h3>헥토</h3>
-                    <p class="muted">동상 · 2025</p>
+            <div class="card">
+                <div class="row row--between">
+                    <h3>헥토그룹 프로젝트 성과발표회</h3>
+                    <span class="muted">2025</span>
                 </div>
+                <p class="muted">동상</p>
             </div>
         </div>
     </section>
@@ -333,58 +333,85 @@
         <div class="container">
             <div class="section__head">
                 <h2>Skills</h2>
-                <p>자주 쓰는 기술과 경험 범위</p>
             </div>
 
-            <div class="grid grid--2">
+            <div class="stack">
+
+                <!-- Language -->
                 <div class="card">
-                    <h3>Backend</h3>
-                    <div class="pillset">
-                        <span class="pill">Java</span>
-                        <span class="pill">Spring Boot</span>
-                        <span class="pill">JPA/Hibernate</span>
-                        <span class="pill">REST API</span>
-                        <span class="pill">Redis</span>
-                        <span class="pill">JUnit</span>
-                    </div>
-                    <p class="muted">API 설계/테스트, 성능 개선, 운영 이슈 대응</p>
+                    <h3>Language</h3>
+
+                    <ul class="bullets">
+                        <li>
+                            <strong>Java / Spring</strong><br />
+                            Spring Boot와 JPA를 활용한 REST API 설계·구현 경험
+                        </li>
+
+                        <li>
+                            <strong>Python</strong><br />
+                            데이터 전처리 및 간단한 분석, 배치성 작업을 위한 스크립트 작성 경험이 있습니다.
+                        </li>
+
+                        <li>
+                            <strong>Kotlin</strong><br />
+                            Android 프로젝트에서 Kotlin을 사용해 null-safety를 고려한 안정적인 코드 작성을 경험했습니다.
+                        </li>
+
+                        <li>
+                            <strong>React / TypeScript / HTML·CSS</strong><br />
+                            컴포넌트 단위 UI 설계와 상태 기반 화면 구성을 경험했으며 TypeScript를 통해 유지보수성을 개선했습니다.
+                        </li>
+                    </ul>
                 </div>
 
+                <!-- Database -->
                 <div class="card">
-                    <h3>Frontend</h3>
-                    <div class="pillset">
-                        <span class="pill">React</span>
-                        <span class="pill">TypeScript</span>
-                        <span class="pill">HTML/CSS</span>
-                        <span class="pill">Vite</span>
-                    </div>
-                    <p class="muted">컴포넌트 설계, 상태관리, 반응형 UI</p>
+                    <h3>Database</h3>
+
+                    <ul class="bullets">
+                        <li>
+                            <strong>MySQL</strong><br />
+                            ERD 설계 및 정규화 기반 테이블 구조 설계 경험이 있으며,
+                            인덱스와 조인을 고려한 쿼리 작성이 가능합니다.
+                        </li>
+
+                        <li>
+                            <strong>PostgreSQL</strong><br />
+                            프로젝트에서 PostgreSQL을 사용해
+                            데이터 무결성과 안정성을 고려한 설계를 경험했습니다.
+                        </li>
+
+                        <li>
+                            <strong>Redis</strong><br />
+                            캐시 저장소로 활용하여 조회 성능을 개선했으며
+                            세션 및 임시 데이터 관리 용도로 사용했습니다.
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="card">
-                    <h3>DB / Infra</h3>
-                    <div class="pillset">
-                        <span class="pill">MySQL</span>
-                        <span class="pill">PostgreSQL</span>
-                        <span class="pill">AWS(선택)</span>
-                        <span class="pill">Docker(선택)</span>
-                    </div>
-                    <p class="muted">ERD 설계, 인덱싱/쿼리 튜닝, 배포 자동화(선택)</p>
-                </div>
-
+                <!-- Tools -->
                 <div class="card">
                     <h3>Tools</h3>
-                    <div class="pillset">
-                        <span class="pill">Git/GitHub</span>
-                        <span class="pill">Notion</span>
-                        <span class="pill">Jira</span>
-                        <span class="pill">Figma</span>
-                    </div>
-                    <p class="muted">협업/문서화/이슈관리</p>
+
+                    <ul class="bullets">
+                        <li>
+                            <strong>Git / GitHub</strong><br />
+                            기능 단위 커밋과 브랜치 전략, Github Action을 활용해
+                            협업 및 코드 변경 이력을 관리했습니다.
+                        </li>
+
+                        <li>
+                            <strong>Notion</strong><br />
+                            기획 정리, API 명세, 회의 기록 등
+                            프로젝트 전반을 문서화하는 도구로 활용했습니다.
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- Projects -->
     <section class="section" id="projects">
