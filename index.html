@@ -426,7 +426,7 @@
                             <span class="tag">Solo</span>
                     </div>
                     <h2>프로젝트 개요</h2>
-                    <p class="muted">CareMate는 요양원 선택 과정에서 발생하는
+                    <p>CareMate는 요양원 선택 과정에서 발생하는
                         정보 분산, 비교의 어려움, 비용 계산의 복잡성을 해결하기 위해 기획한
                         사용자 맞춤 요양원 추천 서비스입니다.
 
@@ -450,12 +450,14 @@
                     </ul>
                     <h2>기술 스택 및 아키텍처</h2>
                     <ul class="bullets">
-                        <li>Backend: FastAPI, PostgreSQL</li>
-                        <li>Data / Pipeline: Python, Airflow</li>
-                        <li>AI: OpenAI API</li>
-                        <li>Frontend: React</li>
-                        <li>Infra / Deploy : Render, Vercel</li>
+                        <li><strong>Backend</strong>: Spring Boot, FastAPI</li>
+                        <li><strong>Database</strong>: PostgreSQL</li>
+                        <li><strong>Frontend</strong>: React</li>
+                        <li><strong>Data Pipeline</strong>: Python, Airflow</li>
+                        <li><strong>AI</strong>: OpenAI API</li>
+                        <li><strong>Infra & Deploy</strong>: Render, Vercel</li>
                     </ul>
+
                     <h2>성과 및 배운 점</h2>
                     <ul class="bullets">
                         <li>데이터 수집 → 저장 → 분석 → 추천 → 서비스 제공까지 데이터 기반 서비스의 전체 흐름을 직접 설계·구현</li>
@@ -469,37 +471,118 @@
                     </div>
                 </article>
 
-                <article class="card project">
-                    <div class="project__top">
-                        <h3>사건, 오늘 - 범죄 관련 이슈 사이트</h3>
-                        <span class="tag tag--solo">Team</span>
-                    </div>
-                    <p class="muted">범죄 기사 페이지 + 실시간 인기 기사</p>
-                    <ul class="bullets">
-                        <li>역할: 풀스택</li>
-                        <li>포인트: 권한 기반 메뉴, CRUD, 파일 업로드</li>
-                        <li>성과: 운영 편의성 개선</li>
-                    </ul>
-                    <div class="project__links">
-                        <a class="btn btn--small" href="https://github.com/yunseo2723/MSA" target="_blank" rel="noreferrer">GitHub</a>
-                    </div>
-                </article>
+            <article class="card project">
+                <div class="project__top">
+                    <h3>사건, 오늘 – 범죄 기사 실시간 분석 서비스</h3>
+                    <span class="tag">Team</span>
+                </div>
+                <h2>프로젝트 개요</h2>
+                <p>사건, 오늘은 네이버 뉴스에서 범죄 관련 기사를 수집해
+                    키워드 단위로 분류·노출하고,
+                    사용자 반응 데이터를 기반으로 실시간 인기 기사를 제공하는 서비스입니다.
 
-                <article class="card project">
-                    <div class="project__top">
-                        <h3>우파루 오딧세이 조합법</h3>
-                        <span class="tag">Solo</span>
-                    </div>
-                    <p class="muted">게임 내 조합 레시피 공유 + 관련 정보 리스트업</p>
-                    <ul class="bullets">
-                        <li>포인트: 검색/필터/정렬, 추천 로직(선택)</li>
-                        <li>성과: 응답시간 개선, 장애 대응 경험</li>
-                    </ul>
-                    <div class="project__links">
-                        <a class="btn btn--small" href="https://github.com/yunseo2723/UparuOditseyAboutApp" target="_blank" rel="noreferrer">GitHub</a>
-                        <a class="btn btn--small btn--ghost" href="https://play.google.com/store/apps/details?id=com.uparu.uparumaking" target="_blank" rel="noreferrer">PlayStore</a>
-                    </div>
-                </article>
+                    기사에 작성된 댓글을 분석해
+                    AI 기반 감성 분석 결과를 시각화하고,
+                    조회수·댓글·좋아요 데이터를 결합해
+                    이슈 흐름을 직관적으로 파악할 수 있도록 설계했습니다.</p>
+
+                <h2>핵심 기능 및 서비스 흐름</h2>
+                <ul class="bullets">
+                    <li>네이버 뉴스 크롤링 기반 기사 수집 및 키워드 분류</li>
+                    <li>기사별 댓글 작성 및 좋아요 기능</li>
+                    <li>OpenAI API를 활용한 댓글 감성 분석(긍·부정)</li>
+                    <li>Redis 캐싱을 통한 기사 조회 성능 개선</li>
+                    <li>Kafka 기반 이벤트 집계로 실시간 인기 TOP10 기사 노출</li>
+                </ul>
+
+                <h2>담당 역할</h2>
+                <ul class="bullets">
+                    <li>풀스택 개발</li>
+                    <li>로그인/기사/댓글/인기 기사 등 API 구현</li>
+                    <li>댓글 AI 감성 분석 기능 구현, 분석 결과를 저장하고 그래프로 시각화</li>
+                </ul>
+
+                <h2>기술 스택 및 아키텍처</h2>
+                <ul class="bullets">
+                    <li><strong>Architecture</strong>: Spring 기반 MSA 구조</li>
+                    <li><strong>Backend</strong>: Spring Boot</li>
+                    <li><strong>Frontend</strong>: React</li>
+                    <li><strong>Service Discovery</strong>: Netflix Eureka</li>
+                    <li><strong>API Gateway</strong>: Spring Cloud Gateway</li>
+                    <li><strong>Cache</strong>: Redis</li>
+                    <li><strong>Message / Event</strong>: RabbitMQ, Kafka</li>
+                    <li><strong>Infra & Deploy</strong>: Netlify, AWS EC2 (Docker)</li>
+                </ul>
+
+                <h2>성과 및 배운 점</h2>
+                <ul class="bullets">
+                    <li>MSA 환경에서 서비스 디스커버리, 메시지 큐, 캐싱을 활용한 확장 구조 경험</li>
+                    <li>동기 처리의 한계를 인식하고 비동기·이벤트 기반 아키텍처 설계 경험</li>
+                    <li>AI(OpenAI)를 서비스 기능에 자연스럽게 통합한 경험</li>
+                </ul>
+                <div class="project__links">
+                    <a class="btn btn--small" href="https://github.com/SW-Cloud-Fundamentals/MSA" target="_blank" rel="noreferrer">GitHub</a>
+<!--                    <a class="btn btn&#45;&#45;small btn&#45;&#45;ghost" href="https://caremate.kro.kr" target="_blank" rel="noreferrer">Site</a>-->
+                </div>
+            </article>
+
+            <article class="card project">
+                <div class="project__top">
+                    <h3>우파루 오딧세이 조합법 – 게임 조합 정보 제공 Android 앱</h3>
+                    <span class="tag">Solo</span>
+                </div>
+                <h2>프로젝트 개요</h2>
+                <p>우파루 오딧세이 조합법 앱은 모바일 게임 우파루 오딧세이에서
+                    복잡하게 흩어져 있는 캐릭터(우파루) 조합 정보를 체계적으로 정리해
+                    사용자가 원하는 결과를 빠르게 찾을 수 있도록 만든 조합 정보 앱입니다.
+
+                    단순 정보 나열이 아니라,
+                    조합 규칙과 조건을 구조화해 검색·필터·추천 흐름으로 제공하는 것을 목표로 했습니다.</p>
+
+                <h2>서비스 운영현황</h2>
+                <ul class="bullets">
+                    <li>Google Play Store 정식 배포</li>
+                    <li>누적 사용자 약 3만 명</li>
+                    <li>사용자 피드백을 반영해 지속적인 기능 개선 및 업데이트 진행 중</li>
+                </ul>
+
+                <h2>핵심 기능 및 서비스 흐름</h2>
+                <ul class="bullets">
+                    <li>부모 우파루 조합을 기반으로 한 결과 우파루 조회</li>
+                    <li>원하는 우파루를 기준으로 한 역방향 조합 검색</li>
+                    <li>속성·특수 조건 기반 필터 및 정렬 기능</li>
+                    <li>조합 결과를 빠르게 탐색할 수 있는 리스트 중심 UX</li>
+                </ul>
+
+                <h2>데이터 구조 & 알고리즘</h2>
+                <ul class="bullets">
+                    <li>우파루, 속성, 조합 규칙을 정규화된 데이터 구조로 설계</li>
+                    <li>조합 연산 시 불필요한 계산을 줄이기 위한 조건 분기 및 사전 필터링</li>
+                    <li>앱 실행 시 필요한 데이터를 미리 로딩해 검색 응답 속도와 UX 개선</li>
+                </ul>
+
+                <h2>기술 스택 및 아키텍처</h2>
+                <ul class="bullets">
+                    <li><strong>Platform</strong>: Android</li>
+                    <li><strong>Language</strong>: Kotlin</li>
+                    <li><strong>Architecture</strong>: 로컬 데이터 기반 단일 앱 구조</li>
+                    <li><strong>Data Handling</strong>: 정규화된 조합 데이터 구조</li>
+                    <li><strong>UI</strong>: RecyclerView 기반 리스트 UI</li>
+                    <li><strong>Deploy</strong>: Google Play Store</li>
+                </ul>
+
+                <h2>성과 및 배운 점</h2>
+                <ul class="bullets">
+                    <li>게임 도메인의 규칙을 분석해 데이터 구조와 알고리즘으로 문제를 해결하는 경험</li>
+                    <li>단순 CRUD가 아닌 조합 계산·검색 성능을 고려한 로직 설계 경험</li>
+                    <li>사용자 입장에서 “빠르게 원하는 정보에 도달하는 UX”의 중요성을 체감</li>
+                    <li>개인 프로젝트로 기획 → 개발 → 배포까지 전 과정을 혼자 완성</li>
+                </ul>
+                <div class="project__links">
+                    <a class="btn btn--small" href="https://github.com/yunseo2723/UparuOditseyAboutApp" target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="btn btn--small btn--ghost" href="https://play.google.com/store/apps/details?id=com.uparu.uparumaking" target="_blank" rel="noreferrer">PlayStore</a>
+                </div>
+            </article>
             </div>
     </section>
 
