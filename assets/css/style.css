@@ -328,11 +328,9 @@ img{ max-width: 100%; display: block; }
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: contain;
-    background: #0f1320;
+    background: transparent;
+    padding: 0;
     border-radius: 12px;
-
-    /* 흰 배경 UI 보호 */
-    padding: 6px;
 }
 
 .cert-toggle {
