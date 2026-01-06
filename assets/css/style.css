@@ -312,10 +312,9 @@ img{ max-width: 100%; display: block; }
 
 .project-images {
     display: grid;
-    gap: 12px;
-    margin: 16px 0 20px;
+    gap: 16px;
+    margin: 20px 0;
 }
-
 .project-images.grid--2 {
     grid-template-columns: repeat(2, 1fr);
 }
@@ -323,12 +322,13 @@ img{ max-width: 100%; display: block; }
 .project-images.grid--3 {
     grid-template-columns: repeat(3, 1fr);
 }
-
 .project-images img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: contain;
     background: #0f1320;
+    border-radius: 12px;
+    padding: 6px;
 }
 
 .cert-toggle {
