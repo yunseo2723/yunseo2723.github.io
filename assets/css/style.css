@@ -312,9 +312,16 @@ img{ max-width: 100%; display: block; }
 
 .project-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     margin: 16px 0 20px;
+}
+
+.project-images.grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-images.grid--3 {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .project-images img {
@@ -322,7 +329,7 @@ img{ max-width: 100%; display: block; }
     height: 140px;
     object-fit: cover;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
     background: #0f1320;
 }
 
